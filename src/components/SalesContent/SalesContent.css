@@ -1,0 +1,15 @@
+.deals-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2rem;
+}
+
+.deals-stats > * {
+    flex: 1;
+    max-height: 18rem;
+}
+
+.deals-stats > *:first-child {
+    margin-right: 1rem;
+}

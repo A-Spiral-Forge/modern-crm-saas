@@ -1,0 +1,80 @@
+.sales-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sales-header--left {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.sales-header--title {
+    margin: 1rem;
+    margin-right: 0.25rem;
+}
+
+.sales-header--last_edited {
+    margin: 1rem;
+    margin-left: 0.25rem;
+    color: var(--grey-color);
+}
+
+.sales-header--right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 100%;
+    background-color: var(--color-primary);
+}
+
+.sales-header--right > button {
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 900;
+    font-family: 'Strawford', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.sales-header--right > button > i {
+    margin-right: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.sales-header--right > button:first-child {
+    margin-left: 0;
+}
+
+.sales-header--right > button:last-child {
+    margin-right: 0;
+}
+
+.sales-header--right > button.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.sales-header--right > button.btn-primary:hover, .sales-header--right > button.btn-primary:focus, .sales-header--right > button.btn-primary:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.sales-header--right > button.btn-outline-secondary {
+    color: var(--black-color);
+    border-color: var(--grey-color);
+}
+
+.sales-header--right > button.btn-outline-secondary:hover, .sales-header--right > button.btn-outline-secondary:focus, .sales-header--right > button.btn-outline-secondary:active {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+}

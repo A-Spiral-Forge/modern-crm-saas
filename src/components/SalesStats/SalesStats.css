@@ -1,0 +1,70 @@
+.sales-stats {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sales-stats__item {
+    flex: 1 1 25%;
+    padding: 0rem 1rem;
+    margin: 1rem;
+}
+
+.sales-stats__item:not(:last-child) {
+    border-right: 1px solid var(--grey-color);
+}
+
+.sales-stats__item__title {
+    font-weight: 600;
+    color: var(--grey-color);
+}
+
+.sales-stats__item__numbers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sales-stats__item__numbers__value {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--black-color);
+    margin-right: 0.5rem;
+}
+
+.sales-stats__item__numbers__change {
+    font-size: 0.675rem;
+    font-weight: 600;
+    color: var(--grey-color);
+    background-color: var(--black-color);
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.sales-stats__item__numbers__change.up {
+    color: rgba(0, 128, 0, 1);
+    background-color: rgba(0, 128, 0, 0.325);
+}
+
+.sales-stats__item__numbers__change.down {
+    color: rgba(200, 0, 0, 1);
+    background-color: rgba(255, 0, 0, 0.325);
+}
+
+.sales-stats__item__numbers__change i {
+    margin-right: 0.25rem;
+}
+
+.sales-stats__item_vs__title {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--grey-color);
+}
+
+.sales-stats__item_vs__numbers {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--black-color);
+}

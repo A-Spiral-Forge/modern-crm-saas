@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Strawford';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Strawford Regular'), url('/public/Strawford-Regular.woff') format('woff');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+	--primary-color: #ff7043;
+	--acsend-color: #2e66f6;
+	--black-color: #263238;
+	--grey-color: #78889b;
+  --grey-color-opacity-half: rgba(120, 136, 155, 0.5);
+  --dark-grey-color: #56616d;
+  --white-color: #f4f6f4;
+	--primary-font-family: 'Strawford', sans-serif;
+  --navbar-height: 4rem;
+  --sidebar-width: 4rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f4f6f4;
+  font-family: var(--primary-font-family) !important;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body::-webkit-scrollbar {
+  display: none;
 }

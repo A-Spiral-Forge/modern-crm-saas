@@ -1,0 +1,149 @@
+.deal-revenue-forecast {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid var(--grey-color);
+    border-radius: 10px;
+}
+
+.deal-revenue-forecast--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.deal-revenue-forecast--header > p {
+    font-weight: 800;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--black-color);
+}
+
+.deal-revenue-forecast--header > a {
+    font-weight: 800;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.deal-revenue-forecast--header > a > i {
+    margin-left: 0.5rem;
+    font-size: 0.675rem;
+}
+
+.deal-revenue-forecast--body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.deal-revenue-forecast--body--item.company-goals {
+    flex: 1;
+}
+
+.deal-revenue-forecast--body--item.team-goals {
+    flex: 2;
+}
+
+.deal-revenue-forecast--body--item p.heading {
+    font-weight: 800;
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--dark-grey-color);
+    margin-bottom: 1rem;
+}
+
+@keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+}
+
+@property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+}
+
+div.company-goals[role="progressbar"] {
+    --size: 9rem;
+    --fg: rgb(50, 100, 255);
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background:
+        radial-gradient(closest-side, var(--white-color) 80%, transparent 0 99.9%, var(--white-color) 0),
+        conic-gradient( var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    margin: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.company-goals[role="progressbar"] > span.name {
+    font-size: 0.6rem;
+    color: var(--grey-color);
+    font-weight: 700;
+}
+
+div.company-goals[role="progressbar"] > span.value {
+    font-size: 1.25rem;
+    color: var(--black-color);
+    font-weight: 700;
+}
+
+.team-goals > .data > .data--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.team-goals > .data > .data--item > .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.team-goals > .data > .data--item > .text > .name {
+    color: var(--dark-grey-color);
+}
+
+.team-goals > .data > .data--item > .text > .value {
+    color: var(--black-color);
+    font-weight: 700;
+}
+
+.team-goals > .data > .data--item > .text > .value > .value--2 {
+    color: var(--grey-color);
+}
+ 
+.team-goals > .data > .data--item > .progress.range-bar {
+    width: 100%;
+    height: 0.5rem;
+    background: var(--grey-color-opacity-half);
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.team-goals > .data > .data--item > .progress.range-bar > .range-bar--value {
+    width: var(--value);
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 0.25rem;
+}
